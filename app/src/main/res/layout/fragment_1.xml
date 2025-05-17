@@ -1,26 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/texto"
-        android:hint="Escreva um texto aqui!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp" />
-
-    <Button
-        android:id="@+id/enviarTexto"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/texto"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#4CAF50"
-        android:text="Enviar Texto" />
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <EditText
+                android:id="@+id/texto"
+                android:hint="Escreva um texto aqui!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/enviarTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texto"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#4CAF50"
+                android:text="Enviar Texto" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
